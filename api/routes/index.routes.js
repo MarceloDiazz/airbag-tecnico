@@ -7,7 +7,7 @@ const products= require('./products')
 //en vez de app ya traigo directo router
 const router= Router()
 
-/* router.use('/auth', auth) */
+router.use('/auth', auth)
 router.use('/admin', admin)
 router.use('/products', products)
 
