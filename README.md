@@ -16,7 +16,6 @@ DIA 2: FRONT
 -Productos: Terminado
 -Navbar: terminado
 -Search: por categoria
--Presentacon: Proceso
 
 
 vistas usuarios: navbar*, products(eliminar*, postear*, editar*)
