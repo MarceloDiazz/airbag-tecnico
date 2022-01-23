@@ -5,11 +5,11 @@ const passport = require("passport");
 const session = require("express-session");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const morgan= require('morgan')
-const mongooseLoader= require('./config/database')
+const morgan = require("morgan");
+const mongooseLoader = require("./config/database");
 
-require ('./config/passport')
-app.use(morgan('dev'));
+require("./config/passport");
+app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -21,15 +21,13 @@ app.use(
     resave: false,
     saveUninitialized: true,
   })
-  );
+);
 
+app.use(passport.initialize());
+app.use(passport.session());
 
-  app.use(passport.initialize());
-  app.use(passport.session());
-  
-  
-  //routes
-  app.use("/api", indexRoutes);
+//routes
+app.use("/api", indexRoutes);
 
 mongooseLoader()
   .then(() => {

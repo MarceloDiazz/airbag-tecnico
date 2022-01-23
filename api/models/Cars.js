@@ -1,17 +1,16 @@
-const mongoose =require('mongoose');
+const mongoose = require("mongoose");
 //SCHEMA: CAMPOS DEL MODELO
 //MODEL: EL NOMBRE DEL MODELO
 
-const carsSchema = new  mongoose.Schema(
+const carsSchema = new mongoose.Schema(
   {
     year: {
       type: Number,
-      required: true,
+      required: false,
     },
     make: {
       type: String,
       required: true,
-      
     },
     model: {
       type: String,
@@ -21,21 +20,19 @@ const carsSchema = new  mongoose.Schema(
       type: Number,
       required: true,
     },
-    img_url:{
+    img_url: {
       type: String,
-      required: true
+      required: true,
     },
     done: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
   {
     timestamps: true,
-    versionKey: false
+    versionKey: false,
   }
 );
 
-
-module.exports =
-  mongoose.models.Cars || mongoose.model("cars", carsSchema);
+module.exports = mongoose.models.Cars || mongoose.model("cars", carsSchema);

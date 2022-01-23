@@ -1,19 +1,23 @@
-tiempos hasta el domingo a las 9am
+tiempo hasta el domingo a las 9am
 
 
-dia 1 
-terminar backend
-    PASSPORT TERMINADO
-- eliminar, editar y postear producto usando postman (LISTO)
 
 
-dia 2 frontend
--vistas generales de usuario logueado y admin
+DIA 1: BACKEND 
 
--login y register
+-autenticación y usuarios: passport -TERMINADO
+-Administrador: Terminado
+-Productos: Terminado
 
--Navbar (opcional: search)
 
--Content con lista de todos los productos
 
+DIA 2: FRONT
+-Logger: Terminado
+-Productos: Terminado
+-Navbar: terminado
+-Search: por categoria
+-Presentacon: Proceso
+
+
+vistas usuarios: navbar*, products(eliminar*, postear*, editar*)
 
