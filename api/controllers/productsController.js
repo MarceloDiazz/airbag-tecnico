@@ -1,20 +1,32 @@
 const ProductsService = require("../services/productServices");
 
-
 class ProductsController {
-    static async allProducts(req, res) {
-        const { error, data } = await ProductsService.allProducts();
+  static async allProducts(req, res) {
+    const { error, data } = await ProductsService.allProducts();
 
-        return error ? res.status(data.status || 500).json({ message: data }) : res.json(data);
-    }
+    return error
+      ? res.status(data.status || 500).json({ message: data })
+      : res.json(data);
+  }
 
-    static async getProductById(req, res) {
-        const { error, data } = await ProductsService.getProductById(req.params.productId);
+  static async getProductById(req, res) {
+    const { error, data } = await ProductsService.getProductById(
+      req.params.productId
+    );
 
-        return error ? res.status(data.status || 500).json({ message: data }) : res.json(data);
-    }
+    return error
+      ? res.status(data.status || 500).json({ message: data })
+      : res.json(data);
+  }
+  static async productsByMake(req, res) {
+    const { error, data } = await ProductsService.productsByMake(
+      req.params.name
+    );
 
+    return error
+      ? res.status(data.status || 500).json({ message: data })
+      : res.json(data);
+  }
 }
 
-
-module.exports= ProductsController
+module.exports = ProductsController;
